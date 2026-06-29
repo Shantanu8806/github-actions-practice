@@ -1,4 +1,4 @@
-#This is a function
+#This is the updated function
 class LogAnalyzer:
     def __init__(self, log_file):
         """
