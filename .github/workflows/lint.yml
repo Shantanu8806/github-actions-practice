@@ -1,0 +1,22 @@
+# What is the goal 
+# Whenever someone changes python code the linter checks indentation syntax 
+
+name: Auto Linter
+
+on: 
+  push: 
+    paths: "*.py"
+
+jobs:
+  code : 
+    runs-on: ubuntu-latest
+    #This step will automatically clone the code of the current branch into the runner
+    steps:
+      - name: CheckOut/Clone the code
+        uses: actions/checkout@v7
+    #This step will install the linter package
+      - name: Install Linter
+        run: pip install linter
+    #This step will run the Linter
+      - name: Check the files for Linting
+        run: ruff check .
