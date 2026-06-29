@@ -8,7 +8,7 @@ class LogAnalyzer:
         self.log_file = log_file
         self.counts = {"INFO": 0, "WARNING": 0, "ERROR": 0, "UNKNOWN": 0}
 
-    df read_logs(self):
+    def read_logs(self):
         """
         Function to read logs from the given log file
         """
